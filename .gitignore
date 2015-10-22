@@ -47,9 +47,23 @@
 .cache-**
 /.idea
 /.settings
-
+.scala_dependencies
+.worksheet
+.idea
+.idea_modules
 
 # Sbt's target directories
 /target/
 /project/target/
 /project/project/target
+
+# Sbt specific
+.cache
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
