@@ -13,6 +13,8 @@ import org.json4s.jackson.JsonMethods._
  */
 class GitLogQueries  {
 
+  // TODO: Add akka
+
   implicit val formats = DefaultFormats
 
 
@@ -50,8 +52,8 @@ class GitLogQueries  {
    */
   def countByField(extractor: (String, String)  => String)(source: Source, key : String) : Map[String, Int] = {
 
-    lazy val stream = source.getLines().toStream
-    lazy val resultStream = stream.map(extractor(_, key))
+    lazy val lines = source.getLines().toStream
+    lazy val resultStream = lines.map(extractor(_, key))
     lazy val groupedStream = resultStream.groupBy(p => p)
     groupedStream.map{case (k: String, v: Stream[String]) => (k, v.size)}
   }

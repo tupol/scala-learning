@@ -7,16 +7,17 @@ import scala.io.Source
 /**
  * Created by olivertupran on 22/10/15.
  */
-class GitLogQueriesCLI  extends App {
+object GitLogQueriesCLI  extends App {
 
 
+  // TODO add parameters parsing...
   override def main(args: Array[String]) = {
 
     val dir = new File("../glogs/")
 
     val glq = new GitLogQueries
 
-    val sources = glq.getFiles(dir).map(Source.fromFile(_)).take(10)
+    val sources = glq.getFiles(dir).map(Source.fromFile(_)).take(100)
 
     println(s"Processing ${sources.size} files ...")
 
