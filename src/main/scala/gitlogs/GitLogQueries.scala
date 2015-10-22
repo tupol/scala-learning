@@ -1,4 +1,4 @@
-package com.lunatech.gitlogs
+package gitlogs
 
 import java.io.File
 
@@ -13,22 +13,21 @@ import org.json4s.jackson.JsonMethods._
 /**
  * Created by olivertupran on 21/10/15.
  */
-object GitLogQueries extends App {
+class GitLogQueries  {
 
   implicit val formats = DefaultFormats
 
-  override def main(args: Array[String]): Unit = {
-
-    val dir = new File("src/test/resources/")
-    val dir = new File("src/test/resources/")
-
-    lazy val sources = getFiles(dir).take(20).toParArray.map(Source.fromFile(_)).toList
-
-    time(countByField(sources, "type").foreach(p => println("%-35s | %6d".format(p._1, p._2))))
-
-    sources.map(_.close())
-
-  }
+//  override def main(args: Array[String]): Unit = {
+//
+//    val dir = new File("src/test/resources/")
+//
+//    lazy val sources = getFiles(dir).toParArray.map(Source.fromFile(_)).toList
+//
+//    time(countByField(sources, "type"))
+//
+//    sources.map(_.close())
+//
+//  }
 
   /**
    * Given a list of sources, countByField each source then aggregate the results
@@ -49,20 +48,44 @@ object GitLogQueries extends App {
    */
   def countByField(source: Source, key : String) : Map[String, Int] = {
     lazy val stream = source.getLines().map(parse(_)).toStream
-    lazy val resultStream = stream.map(j => compact(j \ key))
+    lazy val resultStream = stream.map(j => (j \ key).extract[String])
     lazy val groupedStream = resultStream.groupBy(p => p)
     groupedStream.map{case (k: String, v: Stream[String]) => (k, v.size)}
   }
 
-  def getFiles(dir: File): List[File] = dir.listFiles.toList
 
+  def prettyPrintResults(results : Map[String, Int]) : Unit = {
+    results.foreach(p => println("%-35s | %6d".format(p._1, p._2)))
+  }
+
+  def getFiles(dir: File): List[File] = dir.listFiles.toList
 
   def time[R](block: => R): R = {
     val t0 = System.currentTimeMillis()
-    val result = block    // call-by-name
+    val result = block
     val t1 = System.currentTimeMillis()
     println("Execution time: " + (t1 - t0) + " ms")
     result
   }
+
+
+}
+
+object GitLogQueries extends App {
+
+  override def main(args: Array[String]) = {
+
+    val dir = new File("../glogs/")
+
+    val glq = new GitLogQueries
+
+    val sources = glq.getFiles(dir).map(Source.fromFile(_)).take(20)
+
+    glq.time(glq.prettyPrintResults(glq.countByField(sources, "type")))
+
+    sources.map(_.close())
+
+  }
+
 
 }
