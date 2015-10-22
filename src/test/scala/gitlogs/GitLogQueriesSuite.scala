@@ -34,7 +34,6 @@ class GitLogQueriesSuite extends FunSuite {
       assert(result === expected)
 
       sources.map(_.close())
-
     }
   }
 

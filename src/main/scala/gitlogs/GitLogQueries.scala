@@ -19,16 +19,14 @@ class GitLogQueries  {
 
 
   /**
-   * Given a list of sources, countByField each source then aggregate the results
+   * Given a list of sources, countByField each source then aggregate the results.
+   * This default implementation uses regexp for field value extraction... probably not very safe,
+   * as the pattern itself is flimsy
    * @param sources
    * @param key
    * @return a map of field names and number of occurrences
    */
   def countByField(sources: List[Source], key: String) : Map[String, Int] = {
-//    def fieldCounter = countByField(regexpValueExtractor)_
-    //    lazy val allResults = sources.map(fieldCounter(_, key)).toStream
-    //    lazy val allResultsAsList = allResults.map(_.toList).reduce(_ ++ _).toStream
-    //    allResultsAsList.groupBy(p => p._1).map(p => (p._1, p._2.map(_._2))).map(p => (p._1, p._2.reduce(_ + _)))
     countByField(regexpValueExtractor, sources, key)
   }
 
@@ -83,31 +81,5 @@ class GitLogQueries  {
     println("Execution time: " + (t1 - t0) + " ms")
     result
   }
-
-}
-
-object GitLogQueries {
-
-  def apply(): GitLogQueries = new GitLogQueries
-
-}
-
-object GitLogQueriesCLI extends App {
-
-
-  override def main(args: Array[String]) = {
-
-    val dir = new File("../glogs/")
-
-    val glq = new GitLogQueries
-
-    val sources = glq.getFiles(dir).map(Source.fromFile(_))
-
-    glq.time(glq.prettyPrintResults(glq.countByField(sources, "type")))
-
-    sources.map(_.close())
-
-  }
-
 
 }
