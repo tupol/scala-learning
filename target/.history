@@ -1,0 +1,22 @@
+ls -ll
+:q
+quit
+exit
+help
+tasks
+update
+pwd
+:q
+:quit
+:exit
+exit
+update
+compile
+update
+compile
+exit
+compile
+console
+compile
+console
+clean
