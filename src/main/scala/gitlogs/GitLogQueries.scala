@@ -17,17 +17,6 @@ class GitLogQueries  {
 
   implicit val formats = DefaultFormats
 
-//  override def main(args: Array[String]): Unit = {
-//
-//    val dir = new File("src/test/resources/")
-//
-//    lazy val sources = getFiles(dir).toParArray.map(Source.fromFile(_)).toList
-//
-//    time(countByField(sources, "type"))
-//
-//    sources.map(_.close())
-//
-//  }
 
   /**
    * Given a list of sources, countByField each source then aggregate the results
@@ -36,26 +25,53 @@ class GitLogQueries  {
    * @return a map of field names and number of occurrences
    */
   def countByField(sources: List[Source], key: String) : Map[String, Int] = {
-    lazy val allResults = sources.map(countByField(_, key)).toStream
+//    def fieldCounter = countByField(regexpValueExtractor)_
+    //    lazy val allResults = sources.map(fieldCounter(_, key)).toStream
+    //    lazy val allResultsAsList = allResults.map(_.toList).reduce(_ ++ _).toStream
+    //    allResultsAsList.groupBy(p => p._1).map(p => (p._1, p._2.map(_._2))).map(p => (p._1, p._2.reduce(_ + _)))
+    countByField(regexpValueExtractor, sources, key)
+  }
+
+  /**
+   * Given a value extractor, a list of sources, countByField each source then aggregate the results
+   * @param extractor
+   * @param sources
+   * @param key
+   * @return
+   */
+  def countByField(extractor: (String, String)  => String, sources: List[Source], key: String) : Map[String, Int] = {
+    def fieldCounter = countByField(extractor)_
+    lazy val allResults = sources.map(fieldCounter(_, key)).toStream
     lazy val allResultsAsList = allResults.map(_.toList).reduce(_ ++ _).toStream
     allResultsAsList.groupBy(p => p._1).map(p => (p._1, p._2.map(_._2))).map(p => (p._1, p._2.reduce(_ + _)))
   }
 
   /**
-   * Given a source, parse each line as json, extract the type, group by type and count
+   * Given a value extractor, a source, parse each line as json, extract the type, group by type and count
+   * @param extractor
    * @param source
    * @return a map of
    */
-  def countByField(source: Source, key : String) : Map[String, Int] = {
-    lazy val stream = source.getLines().map(parse(_)).toStream
-    lazy val resultStream = stream.map(j => (j \ key).extract[String])
+  def countByField(extractor: (String, String)  => String)(source: Source, key : String) : Map[String, Int] = {
+
+    lazy val stream = source.getLines().toStream
+    lazy val resultStream = stream.map(extractor(_, key))
     lazy val groupedStream = resultStream.groupBy(p => p)
     groupedStream.map{case (k: String, v: Stream[String]) => (k, v.size)}
   }
 
 
+  def jsonValueExtractor(in: String, key: String): String = {
+    (parse(in) \ key).extract[String]
+  }
+
+  def regexpValueExtractor(in: String, key: String): String = {
+    val pattern = s""""$key":"(\\w*)"""".r
+    pattern.findAllIn(in).matchData.toList.head.group(1)
+  }
+
   def prettyPrintResults(results : Map[String, Int]) : Unit = {
-    results.foreach(p => println("%-35s | %6d".format(p._1, p._2)))
+    results.foreach(p => println("%-35s | %9d".format(p._1, p._2)))
   }
 
   def getFiles(dir: File): List[File] = dir.listFiles.toList
@@ -68,10 +84,16 @@ class GitLogQueries  {
     result
   }
 
+}
+
+object GitLogQueries {
+
+  def apply(): GitLogQueries = new GitLogQueries
 
 }
 
-object GitLogQueries extends App {
+object GitLogQueriesCLI extends App {
+
 
   override def main(args: Array[String]) = {
 
@@ -79,7 +101,7 @@ object GitLogQueries extends App {
 
     val glq = new GitLogQueries
 
-    val sources = glq.getFiles(dir).map(Source.fromFile(_)).take(20)
+    val sources = glq.getFiles(dir).map(Source.fromFile(_))
 
     glq.time(glq.prettyPrintResults(glq.countByField(sources, "type")))
 
