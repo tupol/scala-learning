@@ -27,3 +27,5 @@ test
 git commit -m "initial import"
 git commit
 console
+compile
+test

@@ -2,11 +2,9 @@ package gitlogs
 
 import java.io.File
 
-//import scala.collection.JavaConversions._
-import scala.io.{BufferedSource, Source}
+import scala.io.Source
 
-import org.json4s
-import org.json4s.{DefaultFormats, Formats}
+import org.json4s.DefaultFormats
 import org.json4s.jackson.JsonMethods._
 
 
