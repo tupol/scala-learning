@@ -11,10 +11,11 @@ import scala.io.Source
  */
 class GitLogQueriesSuite extends FunSuite {
 
+  import GitLogQueries._
 
-  trait GitLogQueriesTest extends GitLogQueries {
-
+  trait GitLogQueriesTest {
     val dir = new File("src/test/resources/")
+    val paths = getPaths(dir)
 
   }
 
@@ -27,13 +28,10 @@ class GitLogQueriesSuite extends FunSuite {
         "PullRequestEvent" -> 315, "ForkEvent" -> 213, "CommitCommentEvent" -> 56, "DeleteEvent" -> 141,
         "IssuesEvent" -> 373, "ReleaseEvent" -> 24)
 
-      val sources = getFiles(dir).map(Source.fromFile(_))
-
-      val result = (countByField(sources, "type"))
+      val result = calculate(paths, "type")
 
       assert(result === expected)
 
-      sources.map(_.close())
     }
   }
 

@@ -29,3 +29,7 @@ git commit
 console
 compile
 test
+exit
+console
+val i = 1
+:d

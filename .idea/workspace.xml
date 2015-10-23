@@ -2,8 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57d5d4f7-00a8-4a16-8704-5c31e6ec8440" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/gitlogs/FieldExtractor.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$015e909c0fc4b32da1ae$$anonfun$$sbtdef$1$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$015e909c0fc4b32da1ae$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$015e909c0fc4b32da1ae$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$015e909c0fc4b32da1ae.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$015e909c0fc4b32da1ae.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$03b98868bd8de8762b27$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$03b98868bd8de8762b27$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$03b98868bd8de8762b27.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$03b98868bd8de8762b27.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2ed76062d3d8cfdcb39e$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2ed76062d3d8cfdcb39e$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2ed76062d3d8cfdcb39e.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2ed76062d3d8cfdcb39e.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$54b6077c2418ab54dee3$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$54b6077c2418ab54dee3$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$54b6077c2418ab54dee3.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$54b6077c2418ab54dee3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$93872a7e53675ee75a7b$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$93872a7e53675ee75a7b$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$93872a7e53675ee75a7b.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$93872a7e53675ee75a7b.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$9676b9011da895c52416$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$9676b9011da895c52416$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$9676b9011da895c52416.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$9676b9011da895c52416.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a7ae1bb80a46b077e5d2$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a7ae1bb80a46b077e5d2$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a7ae1bb80a46b077e5d2.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a7ae1bb80a46b077e5d2.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueries.scala" afterPath="$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueries.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueriesCLI.scala" afterPath="$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueriesCLI.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/gitlogs/GitLogQueriesSuite.scala" afterPath="$PROJECT_DIR$/src/test/scala/gitlogs/GitLogQueriesSuite.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GitLogs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,25 +92,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GitLogQueries.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GitLogQueries.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueries.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.81414473">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
               <folding>
-                <element signature="e#17#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GitLogQueriesCLI.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueriesCLI.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18595041">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-              <folding>
-                <element signature="e#17#36#0" expanded="true" />
+                <element signature="e#17#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,9 +108,33 @@
         <entry file="file://$PROJECT_DIR$/src/test/scala/gitlogs/GitLogQueriesSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
               <folding>
                 <element signature="e#17#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FieldExtractor.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/gitlogs/FieldExtractor.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+              <folding>
+                <element signature="e#18#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GitLogQueriesCLI.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueriesCLI.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+              <folding>
+                <element signature="e#1#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,9 +158,10 @@
         <option value="$PROJECT_DIR$/src/test/scala/GitLogQueriesSuite.scala" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/scala/gitlogs/FieldExtractor.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/gitlogs/GitLogQueriesSuite.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueries.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueriesCLI.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueries.scala" />
       </list>
     </option>
   </component>
@@ -129,10 +176,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="930" />
+    <option name="x" value="653" />
     <option name="y" value="23" />
-    <option name="width" value="1630" />
-    <option name="height" value="1381" />
+    <option name="width" value="1267" />
+    <option name="height" value="1021" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -273,35 +320,16 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="git&#9;FILE&#9;file:///Users/olivertupran/IdeaProjects/GitLogs/src/main/scala/com/lunatech/gitlogs/GitLogs.scala" />
+    <property name="SearchEverywhereHistoryKey" value="prese&#9;ACTION&#9;TogglePresentationMode&#10;pres&#9;ACTION&#9;TogglePresentationMode&#10;git&#9;FILE&#9;file:///Users/olivertupran/IdeaProjects/GitLogs/src/main/scala/com/lunatech/gitlogs/GitLogs.scala" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.34712642" />
+    <property name="full.screen.before.presentation.mode" value="false" />
   </component>
-  <component name="RunManager" selected="Application.GitLogQueriesCLI">
-    <configuration default="false" name="GitLogs" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.lunatech.gitlogs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.lunatech.gitlogs.GitLogs" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="gitlogs" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.GitLogQueriesCLI (1)">
     <configuration default="false" name="GitLogQueriesSuite.simple test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
@@ -355,6 +383,37 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="gitlogs" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="GitLogQueriesCLI (1)" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="GitLogQueriesCLI" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="gitlogs" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="GitLogQueriesSuite" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="gitlogs" />
+      <setting name="path" value="gitlogs.GitLogQueriesSuite" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
@@ -506,18 +565,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.GitLogs" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.GitLogQueriesSuite.simple test" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GitLogQueries" />
-      <item index="3" class="java.lang.String" itemvalue="Application.GitLogQueriesCLI" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.GitLogQueriesSuite.simple test" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GitLogQueries" />
+      <item index="2" class="java.lang.String" itemvalue="Application.GitLogQueriesCLI" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GitLogQueriesCLI (1)" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.GitLogQueriesSuite" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.GitLogQueriesCLI" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.GitLogQueriesSuite.simple test" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GitLogQueries" />
-        <item index="3" class="java.lang.String" itemvalue="Application.GitLogs" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.GitLogQueriesCLI (1)" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.GitLogQueriesSuite" />
+        <item index="2" class="java.lang.String" itemvalue="Application.GitLogQueriesCLI" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.GitLogQueriesSuite.simple test" />
+        <item index="4" class="java.lang.String" itemvalue="Application.GitLogQueries" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
@@ -525,7 +586,7 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1445503396858" />
+    <option name="lastUpdateTimestamp" value="1445525626183" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -582,25 +643,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="930" y="23" width="1630" height="1381" extended-state="0" />
+    <frame x="653" y="23" width="1267" height="1021" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3246951" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32352942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24085365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33193278" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21779141" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13733228" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291239" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -609,6 +670,31 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32352942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33193278" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20915549" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24969324" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944787" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -643,7 +729,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="45" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="45" />
           <folding>
-            <element signature="e#17#36#0" expanded="true" />
+            <element signature="e#17#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -671,7 +757,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
           <folding>
-            <element signature="e#17#36#0" expanded="true" />
+            <element signature="e#17#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -691,7 +777,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
           <folding>
-            <element signature="e#17#36#0" expanded="true" />
+            <element signature="e#17#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -719,7 +805,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
           <folding>
-            <element signature="e#17#36#0" expanded="true" />
+            <element signature="e#17#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -763,6 +849,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="148" column="13" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/collection/parallel/package.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.7777777">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/collection/parallel/mutable/ParArray.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1111112">
+          <caret line="2" column="151" selection-start-line="2" selection-start-column="151" selection-end-line="2" selection-end-column="151" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/concurrent/duration/Duration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.444445">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/collection/parallel/mutable/ParSeq.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.01594049">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/concurrent/Await.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/util/Try.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74870914">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -771,20 +913,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/gitlogs/GitLogQueriesSuite.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/util/matching/Regex.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30981067">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/Option.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.051635113">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.json4s/json4s-core_2.11/jars/json4s-core_2.11-3.2.9.jar!/org/json4s/ExtractableJsonAstNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.051635113">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/collection/LinearSeqOptimized.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33106962">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/gitlogs/FieldExtractor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
           <folding>
-            <element signature="e#17#36#0" expanded="true" />
+            <element signature="e#18#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueries.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/gitlogs/GitLogQueriesSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
           <folding>
             <element signature="e#17#36#0" expanded="true" />
           </folding>
@@ -793,10 +967,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueriesCLI.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18595041">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
           <folding>
-            <element signature="e#17#36#0" expanded="true" />
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/gitlogs/GitLogQueries.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81414473">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#17#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

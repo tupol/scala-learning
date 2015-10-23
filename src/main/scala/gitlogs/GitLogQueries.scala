@@ -1,85 +1,154 @@
 package gitlogs
 
-import java.io.File
+import java.io.{File}
+import java.nio.file.{Paths, Path}
 
+import scala.concurrent.Future
 import scala.io.Source
 
-import org.json4s.DefaultFormats
-import org.json4s.jackson.JsonMethods._
+
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.util.{Failure, Success, Try}
 
 
 /**
  * Created by olivertupran on 21/10/15.
  */
-class GitLogQueries  {
+object GitLogQueries  {
 
-  // TODO: Add akka
+  // TODO: Try also an akk implementation
 
-  implicit val formats = DefaultFormats
-
-
-  /**
-   * Given a list of sources, countByField each source then aggregate the results.
-   * This default implementation uses regexp for field value extraction... probably not very safe,
-   * as the pattern itself is flimsy
-   * @param sources
-   * @param key
-   * @return a map of field names and number of occurrences
-   */
-  def countByField(sources: List[Source], key: String) : Map[String, Int] = {
-    countByField(regexpValueExtractor, sources, key)
-  }
+  // TODO: Think about this:
+  // I can argue that the Result can be a type in itself and should have "composition" methods (or operators)
+  // like add, subtract...
+  // This wold make results summing up far more easier and more elegant.
+  // However, at this point I am not completely happy with the structure, so it is postponed.
+  type Result = Map[String, Int]
 
   /**
-   * Given a value extractor, a list of sources, countByField each source then aggregate the results
-   * @param extractor
-   * @param sources
+   * Calculate the result using one Future for each Path
+   * @param paths
    * @param key
    * @return
    */
-  def countByField(extractor: (String, String)  => String, sources: List[Source], key: String) : Map[String, Int] = {
-    def fieldCounter = countByField(extractor)_
-    lazy val allResults = sources.map(fieldCounter(_, key)).toStream
-    lazy val allResultsAsList = allResults.map(_.toList).reduce(_ ++ _).toStream
-    allResultsAsList.groupBy(p => p._1).map(p => (p._1, p._2.map(_._2))).map(p => (p._1, p._2.reduce(_ + _)))
+  def calculateInFutures(paths : List[Path], key: String) : Future[Result] = {
+
+    def processor(Path: Path) = Future { calculatePerPath(Path, key) }
+    val futures = paths.map(processor(_))
+    val joinedFutures = joinFutures(futures).map(aggregateTryResults(_))
+    // maybe someday this line will look much cooler
+//    val joinedFutures = futures.foldRight(Future(List[Try[Result]]()))((f, acc) => f addList acc)
+    joinedFutures
+
   }
 
   /**
-   * Given a value extractor, a source, parse each line as json, extract the type, group by type and count
-   * @param extractor
-   * @param source
+   * Calculate result in one Future for the entire input list
+   * @param paths
+   * @param key
+   * @return
+   */
+  def calculateInFuture(paths : List[Path], key: String) : Future[Result] = Future {
+    val partial = paths.map(calculatePerPath(_, key))
+    aggregateTryResults(partial)
+  }
+
+  /**
+   * Calculate the final result synchronously
+   * @param paths
+   * @param key
+   * @return
+   */
+  def calculate(paths : List[Path], key: String) : Result = {
+    val partial = paths.map(calculatePerPath(_, key))
+    aggregateTryResults(partial)
+  }
+
+  /**
+   * Sum up a lit of Results of Try into a Result, adding the values for each int value, and ignoring the failures
+   * @param list
+   * @return
+   */
+  def aggregateTryResults(list: List[Try[Result]]) : Result = {
+    aggregateResults(list
+      // get only successful results; maybe in the future we do something with the failures (like logging)
+      .filter(_.isSuccess).map(_.get))
+  }
+
+
+  /**
+   * Sum up a lit of map into a map, adding the values for each int value
+   * @param list
+   * @return
+   */
+  def aggregateResults(list: List[Result]) : Result = {
+    list
+      // create one big happy list of tuples
+      .flatMap(_.toList)
+      // group the list by the first element of the tuple (the name)
+      .groupBy(p => p._1)
+      // and now for a bit of magic...
+      .map(p =>
+        (p._1,
+          p._2.foldLeft(0)((acc, tup) => acc + tup._2)))
+  }
+
+  /**
+   * CalculatePerPath using the 'RegExpExtractor'
+   * @param Path
+   * @param key
+   * @return
+   */
+  def calculatePerPath(Path : Path, key : String): Try[Result] = {
+    calculatePerPath(RegexpFieldExtractor.extract(key))(Path, key)
+  }
+
+  /**
+   * Given a value extractor, a Path, parse each line as json, extract the type, group by type and count
+   * @param extract
+   * @param path
    * @return a map of
    */
-  def countByField(extractor: (String, String)  => String)(source: Source, key : String) : Map[String, Int] = {
+  def calculatePerPath(extract: (String)  => Option[String])(path: Path, key : String) : Try[Result] = Try {
 
-    lazy val lines = source.getLines().toStream
-    lazy val resultStream = lines.map(extractor(_, key))
-    lazy val groupedStream = resultStream.groupBy(p => p)
-    groupedStream.map{case (k: String, v: Stream[String]) => (k, v.size)}
-  }
-
-
-  def jsonValueExtractor(in: String, key: String): String = {
-    (parse(in) \ key).extract[String]
-  }
-
-  def regexpValueExtractor(in: String, key: String): String = {
-    val pattern = s""""$key":"(\\w*)"""".r
-    pattern.findAllIn(in).matchData.toList.head.group(1)
-  }
-
-  def prettyPrintResults(results : Map[String, Int]) : Unit = {
-    results.foreach(p => println("%-35s | %9d".format(p._1, p._2)))
-  }
-
-  def getFiles(dir: File): List[File] = dir.listFiles.toList
-
-  def time[R](block: => R): R = {
-    val t0 = System.currentTimeMillis()
-    val result = block
-    val t1 = System.currentTimeMillis()
-    println("Execution time: " + (t1 - t0) + " ms")
+    //TODO probably this should return a Try[Map....]
+    def source = Source.fromFile(path.toUri)
+    def lines = source.getLines()
+    def resultList = lines.map(extract(_)).toList
+    // Let's count the "non-occurrences as well"
+    def resultsWithNones = resultList.map { case Some(x) => x; case None => "{NONE}" }
+    def groupedList = resultsWithNones.groupBy(p => p)
+    val result = groupedList.map{case (k: String, v: List[String]) => (k, v.size)}
+    source.close()
     result
   }
 
+  def getPaths(dir: File): List[Path] =
+    dir.listFiles.toList
+      .filter(f => f.getName.toLowerCase.endsWith(".json"))
+      .map(f => Paths.get(f.toURI))
+
+  /** Adds extension methods to future objects.
+    */
+  implicit class FutureOps[T](val self: Future[T]) extends AnyVal {
+    def add(that : Future[T]) : Future[List[T]] = {
+      self.flatMap(x => that.map(y => List(x, y)))
+    }
+    def addList(that : Future[List[T]]) : Future[List[T]] = {
+      self.flatMap(x => that.map(y => x :: y))
+    }
+  }
+
+  /**
+   * Given a list of futures, return a future of list
+   * @param list of futures
+   * @tparam T type of the Future
+   * @return a Future of list of T
+   */
+  def joinFutures[T](list : Seq[Future[T]]) : Future[List[T]] = list match {
+    case Nil => Future(List[T]())
+    case head :: tail => head.flatMap(x => joinFutures(tail).map(xs => x :: xs))
+  }
+
 }
+
