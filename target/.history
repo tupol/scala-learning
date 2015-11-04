@@ -33,3 +33,5 @@ exit
 console
 val i = 1
 :d
+compile
+exit

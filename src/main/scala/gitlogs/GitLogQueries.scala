@@ -1,14 +1,12 @@
 package gitlogs
 
-import java.io.{File}
-import java.nio.file.{Paths, Path}
-
-import scala.concurrent.Future
-import scala.io.Source
-
+import java.io.File
+import java.nio.file.{Path, Paths}
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.util.{Failure, Success, Try}
+import scala.concurrent.Future
+import scala.io.Source
+import scala.util.Try
 
 
 /**
@@ -16,7 +14,7 @@ import scala.util.{Failure, Success, Try}
  */
 object GitLogQueries  {
 
-  // TODO: Try also an akk implementation
+  // TODO: Try also an akka implementation
 
   // TODO: Think about this:
   // I can argue that the Result can be a type in itself and should have "composition" methods (or operators)
@@ -111,7 +109,6 @@ object GitLogQueries  {
    */
   def calculatePerPath(extract: (String)  => Option[String])(path: Path, key : String) : Try[Result] = Try {
 
-    //TODO probably this should return a Try[Map....]
     def source = Source.fromFile(path.toUri)
     def lines = source.getLines()
     def resultList = lines.map(extract(_)).toList
@@ -127,17 +124,6 @@ object GitLogQueries  {
     dir.listFiles.toList
       .filter(f => f.getName.toLowerCase.endsWith(".json"))
       .map(f => Paths.get(f.toURI))
-
-  /** Adds extension methods to future objects.
-    */
-  implicit class FutureOps[T](val self: Future[T]) extends AnyVal {
-    def add(that : Future[T]) : Future[List[T]] = {
-      self.flatMap(x => that.map(y => List(x, y)))
-    }
-    def addList(that : Future[List[T]]) : Future[List[T]] = {
-      self.flatMap(x => that.map(y => x :: y))
-    }
-  }
 
   /**
    * Given a list of futures, return a future of list

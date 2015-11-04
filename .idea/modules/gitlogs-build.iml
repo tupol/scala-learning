@@ -60,7 +60,15 @@
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.10.4/org.scala-sbt/sbt/0.13.5/logging-0.13.5.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Work/scala/scala-2.11.x/src" />
+          <root url="file://$USER_HOME$/Work/scala/scala-2.11.x/src/actors" />
+          <root url="file://$USER_HOME$/Work/scala/scala-2.11.x/src/forkjoin" />
+          <root url="file://$USER_HOME$/Work/scala/scala-2.11.x/src/library" />
+          <root url="file://$USER_HOME$/Work/scala/scala-2.11.x/src/partest-extras" />
+          <root url="file://$USER_HOME$/Work/scala/scala-2.11.x/src/partest-javaagent" />
+          <root url="file://$USER_HOME$/Work/scala/scala-2.11.x/src/repl" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>
